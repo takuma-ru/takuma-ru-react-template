@@ -19,6 +19,7 @@ interface PropsInterface {
 }
 
 const Button: React.FC<PropsInterface> = (props) => {
+  /*-- styled-component --*/
   const Button = styled(motion.button)`
     display: grid;
     grid-template-columns: auto 1fr;
@@ -63,15 +64,21 @@ const Button: React.FC<PropsInterface> = (props) => {
     }
   `
 
-  const handleOnClick = () => {
+  /*-- variables --*/
+
+  /*-- functions --*/
+  const onClick = () => {
     return props.link ? router.push(props.link) : props.onClick
   }
 
+  /*-- life cycle --*/
+
+  /*-- element --*/
   return <>
     <Button
       whileTap={{ scale: 0.98 }}
       style={props.style}
-      onClick={handleOnClick}
+      onClick={onClick}
     >
       {
         props.icon &&
