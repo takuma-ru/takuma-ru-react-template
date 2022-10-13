@@ -1,5 +1,5 @@
 ---
-to: <%= atomic %>/<%= h.changeCase.pascal(componentName) %>.tsx
+to: <%= atomic %>/<%= h.changeCase.pascal(componentName) %>/<%= h.changeCase.pascal(componentName) %>.tsx
 ---
 
 <% if (isUseMotion) { -%>
@@ -37,4 +37,4 @@ const <%= h.changeCase.pascal(componentName) %>Main = styled.div`
 <%= h.changeCase.pascal(componentName) %>.defaultProps = {
 }
 
-export default <%= h.changeCase.pascal(componentName) %>
+export { <%= h.changeCase.pascal(componentName) %> }
