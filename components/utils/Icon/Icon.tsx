@@ -5,7 +5,7 @@ import { IconNameType } from '~/types/icon/iconName'
 
 export interface PropsInterface {
   icon: IconNameType
-  size?: string | number
+  size?: string
   color?: string
   fill?: boolean
   weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700
@@ -17,6 +17,7 @@ export interface PropsInterface {
 const Icon: React.FC<PropsInterface> = (props) => {
   /*-- styled-component --*/
   const Icon = styled.span`
+    font-size: ${props.size};
     color: ${props.color};
     font-variation-settings: 'FILL' ${props.fill ? 1 : 0}, 'wght' ${props.weight}, 'GRAD' ${props.grade}, 'opsz' ${props.opticalSize};
     user-select: none;
@@ -39,12 +40,4 @@ const Icon: React.FC<PropsInterface> = (props) => {
   </>
 }
 
-Icon.defaultProps = {
-  color: colors.black.lighten[1],
-  fill: false,
-  weight: 500,
-  grade: 0,
-  opticalSize: 48
-}
-
-export default Icon
+export { Icon }

@@ -15,6 +15,7 @@ const args: ComponentPropsWithoutRef<T> = {
 }
 
 export default {
+  title: '<%= atomic %>/<%= h.changeCase.pascal(componentName) %>',
   component: <%= h.changeCase.pascal(componentName) %>,
   args,
 } as Meta

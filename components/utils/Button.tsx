@@ -5,8 +5,8 @@ import styled from 'styled-components'
 import colors from '~/styles/colors'
 import { dependsLuminanceColor } from '~/styles/dependsLuminanceColor'
 import { IconNameType } from '~/types/icon/iconName'
-import { PropsInterface as IconProps } from './Icon'
-import Icon from './Icon'
+import { PropsInterface as IconProps } from './Icon/Icon'
+import { Icon } from './Icon'
 
 interface PropsInterface {
   color?: string
