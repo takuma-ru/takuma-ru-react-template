@@ -8,9 +8,9 @@ Template repository for developing web applications with react (next.js)<br>
 react(next.js)を使ってwebアプリケーションを開発する際のテンプレートリポジトリ
 
 ## Features
-- [x] Support Next.js
-- [x] Able to use framer-motion
-- [x] Able to use styled-component
+- [x] Support `Next.js`
+- [x] Able to use `framer-motion`
+- [x] Able to use `styled-component`
 - [x] Support Storybook
 - [x] Provide hygen template files
 - [ ] Support PWA
