@@ -55,3 +55,7 @@ none
 
 ## ScreenShot
 none
+
+----
+
+**This template was created by [@takuma-ru](https://github.com/takuma-ru)**
