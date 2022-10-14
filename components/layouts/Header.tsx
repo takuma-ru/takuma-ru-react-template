@@ -4,7 +4,7 @@ import router, { useRouter } from 'next/router'
 import styled from 'styled-components'
 import favicon from '~/public/favicon.ico'
 import { routerPathLists } from '~/scripts/utils/routerLinks'
-import Button from '../utils/Button'
+import { Button } from '../utils/Button'
 import colors from '~/styles/colors'
 
 interface PropsInterface {

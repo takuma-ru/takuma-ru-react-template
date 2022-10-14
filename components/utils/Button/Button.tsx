@@ -5,10 +5,10 @@ import styled from 'styled-components'
 import colors from '~/styles/colors'
 import { dependsLuminanceColor } from '~/styles/dependsLuminanceColor'
 import { IconNameType } from '~/types/icon/iconName'
-import { PropsInterface as IconProps } from './Icon/Icon'
-import { Icon } from './Icon'
+import { PropsInterface as IconProps } from '~/components/utils/Icon/Icon'
+import { Icon } from '~/components/utils/Icon'
 
-interface PropsInterface {
+export interface PropsInterface {
   color?: string
   icon?: IconNameType
   iconProp?: IconProps
@@ -103,4 +103,4 @@ Button.defaultProps = {
   color: colors.blue.default,
 }
 
-export default Button
+export { Button }

@@ -34,4 +34,7 @@ const <%= h.changeCase.pascal(componentName) %>Main = styled.div`
   </>
 }
 
+<%= h.changeCase.pascal(componentName) %>.defaultProps = {
+}
+
 export { <%= h.changeCase.pascal(componentName) %> }

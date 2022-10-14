@@ -40,4 +40,12 @@ const Icon: React.FC<PropsInterface> = (props) => {
   </>
 }
 
+Icon.defaultProps = {
+  color: colors.black.lighten[1],
+  fill: false,
+  weight: 500,
+  grade: 0,
+  opticalSize: 48
+}
+
 export { Icon }

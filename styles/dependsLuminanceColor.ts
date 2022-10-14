@@ -6,10 +6,9 @@ import colors from './colors'
  * @returns テキストカラー（#RRGGBB）
  */
 export const dependsLuminanceColor = (backgroundColor: string) => {
-  const backgroundColorCode = backgroundColor
-  const red = backgroundColorCode.substring(1, 3)
-  const green = backgroundColorCode.substring(3, 5)
-  const blue = backgroundColorCode.substring(5, 7)
+  const red = backgroundColor.substring(1, 3)
+  const green = backgroundColor.substring(3, 5)
+  const blue = backgroundColor.substring(5, 7)
 
   let luminance = Math.floor((parseInt(red, 16) * 0.299) + (parseInt(green, 16) * 0.587) + (parseInt(blue, 16) * 0.114))
   luminance = luminance / 255
