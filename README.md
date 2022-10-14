@@ -28,6 +28,11 @@ react(next.js)を使ってwebアプリケーションを開発する際のテン
 | hygen(global) | 6.2.11 |
 
 ## Getting Started
+
+#### 0. Click to "Use this template"
+[![image](https://user-images.githubusercontent.com/49429291/195748446-1c9ff3c5-e299-4d75-96d0-09ce9503ad90.png)](https://github.com/takuma-ru/takuma-ru-react-template/generate)
+
+
 #### 1. Install node_modules
   ```md
     yarn
