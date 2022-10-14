@@ -20,15 +20,27 @@ react(next.js)を使ってwebアプリケーションを開発する際のテン
 | hygen(global) | 6.2.11 |
 
 ## Getting Started
-1.  `yarn`<br>
+#### 1. Install node_modules
+  ```md
+    yarn
+  ```
 
-2.  `yarn dev`<br>
+#### 2. Start Web server
+  ```md
+    yarn dev
+  ```
 
-3.  Access to [Localhost:3000](http://localhost:3000/)
+#### 3. Access to web page
+  [Localhost:3000](http://localhost:3000/)
 
-4.  `yarn storybook`<br>
 
-5.  Access to [Localhost:6006](http://localhost:3000/)
+#### 4. Start Storybook server
+  ```md
+    yarn storybook
+  ```
+
+#### 5. Access to Storybook
+  [Localhost:6006](http://localhost:3000/)
 
 ## Deploy Service
 none
