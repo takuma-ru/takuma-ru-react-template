@@ -30,8 +30,7 @@ react(next.js)を使ってwebアプリケーションを開発する際のテン
 ## Getting Started
 
 #### 0. Click to "Use this template"
-[![image](https://user-images.githubusercontent.com/49429291/195748446-1c9ff3c5-e299-4d75-96d0-09ce9503ad90.png)](https://github.com/takuma-ru/takuma-ru-react-template/generate)
-
+[![195748948-7f5a784f-6fb1-4205-b23f-0c9b72ac5c82](https://user-images.githubusercontent.com/49429291/195749502-7ea4d2b1-145d-4c20-9ab8-820b91b88a08.png)](https://github.com/takuma-ru/takuma-ru-react-template/generate)
 
 #### 1. Install node_modules
   ```md
