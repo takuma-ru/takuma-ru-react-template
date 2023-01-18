@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import router, { useRouter } from 'next/router'
 import styled from 'styled-components'
@@ -11,7 +11,6 @@ interface PropsInterface {
 }
 
 const Header: React.FC<PropsInterface> = () => {
-  const [ a, setA ] = useState()
   const Header = styled.header`
     display: flex;
     align-items: center;
