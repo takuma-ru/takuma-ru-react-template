@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import router, { useRouter } from 'next/router'
 import styled from 'styled-components'
@@ -10,7 +10,8 @@ import colors from '~/styles/colors'
 interface PropsInterface {
 }
 
-const Header: React.FC<PropsInterface> = (props) => {
+const Header: React.FC<PropsInterface> = () => {
+  const [ a, setA ] = useState()
   const Header = styled.header`
     display: flex;
     align-items: center;
@@ -72,7 +73,7 @@ const Header: React.FC<PropsInterface> = (props) => {
               <Button
                 key={index}
                 icon={link.icon}
-                link={link.link}
+                to={link.link}
                 color={link.link === path ? colors.white.darken[2] : 'transparent'}
               >
                 { link.node }

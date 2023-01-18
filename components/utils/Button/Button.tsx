@@ -9,12 +9,17 @@ import { PropsInterface as IconProps } from '~/components/utils/Icon/Icon'
 import { Icon } from '~/components/utils/Icon'
 
 export interface PropsInterface {
-  color?: string
-  icon?: IconNameType
-  iconProp?: IconProps
-  link?: string
   children?: ReactNode
+  color?: string
+  disabled?: boolean
+  fab?: boolean
+  icon?: IconNameType
+  iconProps?: IconProps
+  isIcon?: boolean
+  outlined? :boolean
+  size?: 'small' | 'normal' | 'large'
   style?: React.CSSProperties
+  to?: string
   onClick?: () => void
 }
 
@@ -68,7 +73,7 @@ const Button: React.FC<PropsInterface> = (props) => {
 
   /*-- functions --*/
   const onClick = () => {
-    return props.link ? router.push(props.link) : props.onClick
+    return props.to ? router.push(props.to) : props.onClick
   }
 
   /*-- life cycle --*/
@@ -84,11 +89,11 @@ const Button: React.FC<PropsInterface> = (props) => {
         props.icon &&
           <Icon
             icon={props.icon}
-            color={props.iconProp?.color ? props.iconProp?.color : dependsLuminanceColor(props.color!)}
-            fill={props.iconProp?.fill}
-            weight={props.iconProp?.weight}
-            grade={props.iconProp?.grade}
-            opticalSize={props.iconProp?.opticalSize}
+            color={props.iconProps?.color ? props.iconProps?.color : dependsLuminanceColor(props.color!)}
+            fill={props.iconProps?.fill}
+            weight={props.iconProps?.weight}
+            grade={props.iconProps?.grade}
+            opticalSize={props.iconProps?.opticalSize}
             style={{ marginRight: '1rem' }}
           />
       }
