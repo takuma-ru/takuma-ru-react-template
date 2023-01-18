@@ -14,6 +14,7 @@ react(next.js)を使ってwebアプリケーションを開発する際のテン
 - [x] Support Storybook
 - [x] Provide hygen template files
 - [ ] Support PWA
+- [ ] Support Responsive
 
 ## Requirement
 | name | version |
