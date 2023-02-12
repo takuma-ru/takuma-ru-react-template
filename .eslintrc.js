@@ -1,19 +1,22 @@
-{
-  "plugins": ["@typescript-eslint"],
-  "extends": [
+export default {
+  plugins: ["@typescript-eslint"],
+  extends: [
     "next",
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "project": "./tsconfig.json",
-    "ecmaFeatures": {
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    project: "./tsconfig.json",
+    ecmaFeatures: {
       "jsx": true
     }
   },
-  "rules": {
+  ignorePatterns: [
+    "./next.config.js"
+  ],
+  rules: {
     "semi": [ "error", "never", { "beforeStatementContinuationChars": "never" } ],
     "semi-spacing": [ "error", { "after": true, "before": false } ],
     "semi-style": [ "error", "first" ],

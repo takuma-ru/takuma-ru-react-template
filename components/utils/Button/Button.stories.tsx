@@ -15,7 +15,7 @@ const args: ComponentPropsWithoutRef<T> = {
   link: undefined,
   children: 'children',
   style: undefined,
-  onClick: () => {},
+  onClick: () => {console.log('click')},
 }
 
 export default {
@@ -24,4 +24,4 @@ export default {
   args,
 } as Meta
 
-export const ButtonDefault: Story = {}
+export const ButtonDefaultStory: Story = {}

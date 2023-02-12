@@ -5,6 +5,46 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.plugins.push(require('unplugin-auto-import/webpack')({
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+      ],
+      imports: [
+        'react',
+        {
+          'framer-motion': [
+            'motion'
+          ]
+        },
+        {
+          'next/image': [
+            ['default', 'NextImage'],
+          ]
+        },
+        {
+          'next/router': [
+            ['default', 'router'],
+            'useRouter'
+          ]
+        },
+        {
+          'styled-components': [
+            ['default', 'styled']
+          ]
+        },
+      ],
+      defaultExportByFilename: false,
+      dirs: [
+        './components/**',
+        './hooks/**',
+        './scripts/**',
+        './styles/**',
+        './types/**'
+      ]
+    }))
+    return config
+  },
 }
 
 module.exports = nextConfig

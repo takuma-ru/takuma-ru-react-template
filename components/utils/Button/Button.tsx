@@ -1,15 +1,8 @@
-import { motion } from 'framer-motion'
-import router from 'next/router'
-import React, { ReactNode } from 'react'
-import styled from 'styled-components'
-import colors from '~/styles/colors'
-import { dependsLuminanceColor } from '~/styles/dependsLuminanceColor'
 import { IconNameType } from '~/types/icon/iconName'
 import { PropsInterface as IconProps } from '~/components/utils/Icon/Icon'
-import { Icon } from '~/components/utils/Icon'
 
 export interface PropsInterface {
-  children?: ReactNode
+  children?: React.ReactNode
   color?: string
   disabled?: boolean
   fab?: boolean

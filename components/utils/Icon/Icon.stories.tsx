@@ -21,4 +21,4 @@ export default {
   args,
 } as Meta
 
-export const IconDefault: Story = {}
+export const IconDefaultStory: Story = {}

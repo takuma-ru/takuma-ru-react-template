@@ -2,7 +2,6 @@ import { ReactNode } from 'react'
 import styled from 'styled-components'
 import Head from 'next/head'
 import colors from '~/styles/colors'
-import Header from '~/components/layouts/Header'
 
 type LayoutProps = Required<{
   readonly children: ReactNode
@@ -25,7 +24,7 @@ const Layout = ({ children, metaTitle }: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <AppHeader />
 
       <Main>
         {children}
