@@ -1,7 +1,10 @@
+const AutoImport = require('unplugin-auto-import/vite')
 const path = require('path')
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const TsconfigPathsPlugin = require('vite-tsconfig-paths');
+const { mergeConfig } = require('vite')
 
 module.exports = {
+  staticDirs: ['../public'],
   typescript: {
     reactDocgen: false
   },
@@ -12,23 +15,65 @@ module.exports = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    'storybook-dark-mode'
   ],
   framework: "@storybook/react",
   core: {
-    builder: "@storybook/builder-webpack5"
+    builder: "@storybook/builder-vite"
   },
-  webpackFinal: async (config) => {
-    config.resolve.modules = [
-      ...(config.resolve.modules || []),
-      path.resolve(__dirname, '../')
-    ]
-
-    config.resolve.plugins = [
-      ...(config.resolve.plugins || []),
-      new TsconfigPathsPlugin()
-    ]
-
-    return config
+  features: {
+    storyStoreV7: true
+  },
+  viteFinal: async (config) => {
+    console.log("Run viteFinal")
+    return mergeConfig(config, {
+      resolve: {
+        alias: {
+          '~': path.resolve(__dirname, '../'),
+          "next/router": "next-router-mock",
+        }
+      },
+      plugins: [
+        AutoImport({
+          include: [
+            /\.[tj]sx?$/,
+          ],
+          imports: [
+            'react',
+            {
+              'framer-motion': [
+                'motion'
+              ]
+            },
+            {
+              'next/image': [
+                ['default', 'NextImage'],
+              ]
+            },
+            {
+              'next/router': [
+                ['default', 'router'],
+                'useRouter'
+              ]
+            },
+            {
+              'styled-components': [
+                ['default', 'styled']
+              ]
+            },
+          ],
+          dirs: [
+            'components/**',
+            'hooks/**',
+            'scripts/**',
+            'styles/**',
+            'types/**',
+            'layouts/**'
+          ],
+          dts: '.storybook/types/auto-imports.d.ts',
+        })
+      ],
+    })
   }
 }

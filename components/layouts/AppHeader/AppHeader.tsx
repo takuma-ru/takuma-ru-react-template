@@ -46,7 +46,8 @@ const AppHeader: React.FC<PropsInterface> = (props) => {
   `
 
   /*-- variables --*/
-  const path = useRouter().pathname
+  const router = useRouter()
+  const path = router.pathname
 
   /*-- functions --*/
 
@@ -62,7 +63,7 @@ const AppHeader: React.FC<PropsInterface> = (props) => {
         <div className='img'>
           <NextImage
             src={favicon.src}
-            alt='densan-logo'
+            alt='logo'
             width={32}
             height={32}
           />

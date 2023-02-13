@@ -1,6 +1,5 @@
 import { ComponentPropsWithoutRef } from 'react'
 import { type ComponentMeta, type ComponentStoryObj } from '@storybook/react'
-import { Icon } from './Icon'
 
 type T = typeof Icon
 type Meta = ComponentMeta<T>

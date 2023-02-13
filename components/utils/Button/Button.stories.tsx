@@ -11,8 +11,6 @@ type Story = ComponentStoryObj<T>
 const args: ComponentPropsWithoutRef<T> = {
   color: colors.blue.default,
   icon: 'add',
-  iconProp: undefined,
-  link: undefined,
   children: 'children',
   style: undefined,
   onClick: () => {console.log('click')},

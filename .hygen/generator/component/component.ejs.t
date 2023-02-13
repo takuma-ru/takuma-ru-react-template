@@ -1,17 +1,11 @@
 ---
-to: <%= atomic %>/<%= h.changeCase.pascal(componentName) %>/<%= h.changeCase.pascal(componentName) %>.tsx
+to: components/<%= atomic %>/<%= h.changeCase.pascal(componentName) %>/<%= h.changeCase.pascal(componentName) %>.tsx
 ---
 
-<% if (isUseMotion) { -%>
-import { motion } from 'framer-motion'
-<% } -%>
-import React from 'react'
-import styled from 'styled-components'
-
-interface PropsInterface {
+interface I<%= h.changeCase.pascal(componentName) %>Props {
 }
 
-const <%= h.changeCase.pascal(componentName) %>: React.FC<PropsInterface> = (props) => {
+const <%= h.changeCase.pascal(componentName) %>: React.FC<I<%= h.changeCase.pascal(componentName) %>Props> = (props) => {
   /*-- styled-component --*/
   <% if (isUseMotion) { -%>
 const <%= h.changeCase.pascal(componentName) %>Main = styled(motion.div)`

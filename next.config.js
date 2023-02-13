@@ -40,7 +40,8 @@ const nextConfig = {
         './hooks/**',
         './scripts/**',
         './styles/**',
-        './types/**'
+        './types/**',
+        './layouts/**'
       ]
     }))
     return config

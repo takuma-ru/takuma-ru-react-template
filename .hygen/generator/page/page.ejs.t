@@ -2,20 +2,15 @@
 to: pages/<%= h.changeCase.camel(pageName) %>.tsx
 ---
 
-<% if (isUseMotion) { -%>
-import { motion } from 'framer-motion'
-<% } -%>
 import type { NextPageWithLayout } from 'next'
-import styled from 'styled-components'
-import Layout from '~/layouts/Layout'
 
 const <%= h.changeCase.pascal(pageName) %>: NextPageWithLayout  = () => {
   /*-- styled-component --*/
-  <% if (isUseMotion) { -%>
-const <%= h.changeCase.pascal(pageName) %>Main = styled(motion.div)`
-  <% } else { -%>
-const <%= h.changeCase.pascal(pageName) %>Main = styled.div`
-  <% } -%>
+<% if (isUseMotion) { -%>
+  const <%= h.changeCase.pascal(pageName) %>Main = styled(motion.div)`
+<% } else { -%>
+  const <%= h.changeCase.pascal(pageName) %>Main = styled.div`
+<% } -%>
 `
 
   /*-- variables --*/

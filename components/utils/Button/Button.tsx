@@ -62,6 +62,8 @@ const Button: React.FC<PropsInterface> = (props) => {
     }
   `
 
+  const router = useRouter()
+
   /*-- variables --*/
 
   /*-- functions --*/

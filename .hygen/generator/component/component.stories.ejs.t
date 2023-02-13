@@ -1,10 +1,9 @@
 ---
-to: <%= atomic %>/<%= h.changeCase.pascal(componentName) %>/<%= h.changeCase.pascal(componentName) %>.stories.tsx
+to: components/<%= atomic %>/<%= h.changeCase.pascal(componentName) %>/<%= h.changeCase.pascal(componentName) %>.stories.tsx
 ---
 
-import { ComponentPropsWithoutRef } from 'react'
 import { type ComponentMeta, type ComponentStoryObj } from '@storybook/react'
-import { <%= h.changeCase.pascal(componentName) %> } from './<%= h.changeCase.pascal(componentName) %>'
+import { ComponentPropsWithoutRef } from 'react'
 
 type T = typeof <%= h.changeCase.pascal(componentName) %>
 type Meta = ComponentMeta<T>
@@ -15,9 +14,9 @@ const args: ComponentPropsWithoutRef<T> = {
 }
 
 export default {
-  title: '<%= atomic %>/<%= h.changeCase.pascal(componentName) %>',
+  title: 'components/<%= atomic %>/<%= h.changeCase.pascal(componentName) %>',
   component: <%= h.changeCase.pascal(componentName) %>,
   args,
 } as Meta
 
-export const <%= h.changeCase.pascal(componentName) %>Default: Story = {}
+export const <%= h.changeCase.pascal(componentName) %>DefaultStory: Story = {}
