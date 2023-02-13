@@ -8,26 +8,28 @@ Template repository for developing web applications with react (next.js)<br>
 react(next.js)を使ってwebアプリケーションを開発する際のテンプレートリポジトリ
 
 ## Features
-- [x] Support `Next.js`
-- [x] Able to use `framer-motion`
-- [x] Able to use `styled-component`
-- [X] Automatic import of modules and components without using `import x from y`
-- [x] Support Storybook
-- [x] Provide hygen template files
-- [ ] Support PWA
-- [ ] Support Responsive
+:heavy_check_mark: Support [Next.js v13](https://nextjs.org/)
 
-## Requirement
-| name | version |
-| ------------- | ------------- |
-| framer-motion | ^7.3.6 |
-| next | 12.3.1 |
-| react  | 18.2.0 |
-| storybook | ^6.5.12 |
-| styled-components | ^5.3.5 |
-| webpack(storybook only) | ^5.74.0 |
-|  |  |
-| hygen(global) | 6.2.11 |
+:heavy_check_mark: Support [Storybook v7](https://storybook.js.org/)
+
+:construction: Support PWA
+
+:construction: Support Responsive
+
+:calendar: Support [Jotai v2](https://jotai.org/)
+
+:heavy_check_mark: Support [Framer Motion](https://www.framer.com/motion/)
+
+:heavy_check_mark: Support Styled Component
+
+:heavy_check_mark: Automatic import of modules and components without using `import x from y` with `unplugin-auto-import`
+
+:heavy_check_mark: Provide hygen template files
+
+
+> :heavy_check_mark: = Available<br>
+> :construction: = Work in progress<br>
+> :calendar: = Planned<br>
 
 ## Getting Started
 
