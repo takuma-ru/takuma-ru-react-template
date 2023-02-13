@@ -1,6 +1,5 @@
 const AutoImport = require('unplugin-auto-import/vite')
 const path = require('path')
-const TsconfigPathsPlugin = require('vite-tsconfig-paths');
 const { mergeConfig } = require('vite')
 
 module.exports = {
