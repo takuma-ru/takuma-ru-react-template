@@ -11,6 +11,7 @@ react(next.js)を使ってwebアプリケーションを開発する際のテン
 - [x] Support `Next.js`
 - [x] Able to use `framer-motion`
 - [x] Able to use `styled-component`
+- [X] Automatic import of modules and components without using `import x from y`
 - [x] Support Storybook
 - [x] Provide hygen template files
 - [ ] Support PWA
