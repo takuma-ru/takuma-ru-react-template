@@ -1,7 +1,5 @@
 import { ComponentPropsWithoutRef } from 'react'
 import { type ComponentMeta, type ComponentStoryObj } from '@storybook/react'
-import { Button } from './Button'
-import colors from '~/styles/colors'
 
 type T = typeof Button
 type Meta = ComponentMeta<T>
@@ -12,7 +10,6 @@ const args: ComponentPropsWithoutRef<T> = {
   color: colors.blue.default,
   icon: 'add',
   children: 'children',
-  style: undefined,
   onClick: () => {console.log('click')},
 }
 
