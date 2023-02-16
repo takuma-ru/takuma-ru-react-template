@@ -1,12 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
 import favicon from '~/public/favicon.ico'
 
-
-interface PropsInterface {
+interface IAppHeaderProps {
 }
 
-const AppHeader: React.FC<PropsInterface> = (props) => {
+const AppHeader: React.FC<IAppHeaderProps> = (props) => {
   /*-- styled-component --*/
   const AppHeaderMain = styled.header`
     display: flex;

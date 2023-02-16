@@ -19,7 +19,8 @@ const nextConfig = {
         'react',
         {
           'framer-motion': [
-            'motion'
+            'motion',
+            'AnimatePresence'
           ]
         },
         {

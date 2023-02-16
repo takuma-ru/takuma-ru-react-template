@@ -1,9 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import colors from '~/styles/colors'
-import { IconNameType } from '~/types/icon/iconName'
+import { IconNameType } from "~/types/icon/iconName"
 
-export interface PropsInterface {
+export interface IIconProps {
   icon: IconNameType
   size?: string
   color?: string
@@ -14,7 +11,7 @@ export interface PropsInterface {
   style?: React.CSSProperties
 }
 
-const Icon: React.FC<PropsInterface> = (props) => {
+const Icon: React.FC<IIconProps> = (props) => {
   /*-- styled-component --*/
   const Icon = styled.span`
     font-size: ${props.size};

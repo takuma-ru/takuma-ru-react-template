@@ -1,13 +1,13 @@
-import { IconNameType } from '~/types/icon/iconName'
-import { PropsInterface as IconProps } from '~/components/utils/Icon/Icon'
+import { IconNameType } from "~/types/icon/iconName"
+import { IIconProps } from "../Icon/Icon"
 
-export interface PropsInterface {
+interface IButtonProps {
   children?: React.ReactNode
   color?: string
   disabled?: boolean
   fab?: boolean
   icon?: IconNameType
-  iconProps?: IconProps
+  iconProps?: IIconProps
   isIcon?: boolean
   outlined? :boolean
   size?: 'small' | 'normal' | 'large'
@@ -16,7 +16,7 @@ export interface PropsInterface {
   onClick?: () => void
 }
 
-const Button: React.FC<PropsInterface> = (props) => {
+const Button: React.FC<IButtonProps> = (props) => {
   /*-- styled-component --*/
   const Button = styled(motion.button)`
     display: grid;
