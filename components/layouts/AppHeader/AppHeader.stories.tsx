@@ -1,6 +1,5 @@
 import { ComponentPropsWithoutRef } from 'react'
 import { type ComponentMeta, type ComponentStoryObj } from '@storybook/react'
-import { AppHeader } from './AppHeader'
 
 type T = typeof AppHeader
 type Meta = ComponentMeta<T>
@@ -16,4 +15,4 @@ export default {
   args,
 } as Meta
 
-export const AppHeaderDefault: Story = {}
+export const AppHeaderDefaultStory: Story = {}

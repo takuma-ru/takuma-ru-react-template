@@ -7,8 +7,13 @@ const nextConfig = {
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.plugins.push(require('unplugin-auto-import/webpack')({
-      include: [
-        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+      /* include: [
+        /\.[tj]sx?$/,
+      ], */
+      exclude: [
+        /node_modules/,
+        /\.git/,
+        /\.stories\.tsx$/
       ],
       imports: [
         'react',
