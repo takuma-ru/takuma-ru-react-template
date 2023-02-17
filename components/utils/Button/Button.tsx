@@ -1,5 +1,5 @@
-import { IconNameType } from "~/types/icon/iconName"
-import { IIconProps } from "../Icon/Icon"
+import { IconNameType } from '~/types/icon/iconName'
+import { IIconProps } from '../Icon/Icon'
 
 interface IButtonProps {
   children?: React.ReactNode
@@ -26,7 +26,7 @@ const Button: React.FC<IButtonProps> = (props) => {
     position: relative;
     z-index: 0;
     padding: 0.5rem 1.5rem;
-    margin: 0.25rem;
+    /* margin: 0.25rem; */
 
     color: ${ dependsLuminanceColor(props.color!) };
     text-align: center;
@@ -68,7 +68,8 @@ const Button: React.FC<IButtonProps> = (props) => {
 
   /*-- functions --*/
   const onClick = () => {
-    return props.to ? router.push(props.to) : props.onClick
+    console.log('on click')
+    return props.to ? router.push(props.to) : props.onClick ? props.onClick() : null
   }
 
   /*-- life cycle --*/

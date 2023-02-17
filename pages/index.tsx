@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion'
 import type { NextPageWithLayout } from 'next'
-import styled from 'styled-components'
 import Layout from '~/layouts/Layout'
 
 const Index: NextPageWithLayout  = () => {
@@ -9,6 +7,7 @@ const Index: NextPageWithLayout  = () => {
   `
 
   /*-- variables --*/
+  const [ count, setCount ] = useAtom(countAtom)
 
   /*-- functions --*/
 
@@ -17,7 +16,8 @@ const Index: NextPageWithLayout  = () => {
   /*-- element --*/
   return <>
     <IndexMain>
-      index
+      <div>{count}</div>
+      <Button onClick={() => setCount(c => c + 1)}>one up</Button>
     </IndexMain>
   </>
 }

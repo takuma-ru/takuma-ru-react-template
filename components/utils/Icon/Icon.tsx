@@ -1,4 +1,4 @@
-import { IconNameType } from "~/types/icon/iconName"
+import { IconNameType } from '~/types/icon/iconName'
 
 export interface IIconProps {
   icon: IconNameType

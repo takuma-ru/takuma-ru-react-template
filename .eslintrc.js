@@ -1,9 +1,9 @@
-export default {
+module.exports = {
   plugins: ["@typescript-eslint"],
   extends: [
     "next",
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -29,6 +29,7 @@ export default {
     "object-curly-spacing": [ "error", "always" ],
     "array-bracket-spacing": [ "error", "always" ],
     "react/jsx-boolean-value": "error",
+    "react/jsx-no-undef": [0, { "allowGlobals": 0 }],
     "react/self-closing-comp": [
       "error",
       {

@@ -24,6 +24,12 @@ const nextConfig = {
           ]
         },
         {
+          'jotai': [
+            'Provider',
+            'useAtom'
+          ]
+        },
+        {
           'next/image': [
             ['default', 'NextImage'],
           ]
@@ -44,10 +50,11 @@ const nextConfig = {
       dirs: [
         './components/**',
         './hooks/**',
+        './jotai/**',
         './scripts/**',
         './styles/**',
         './types/**',
-        './layouts/**'
+        './layouts/*'
       ]
     }))
     return config

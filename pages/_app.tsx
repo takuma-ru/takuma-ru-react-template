@@ -33,8 +33,10 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout ) => {
 
   return getLayout(
     <>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <Provider>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </Provider>
     </>
   )
 }
