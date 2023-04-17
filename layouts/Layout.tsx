@@ -1,12 +1,12 @@
-import { ReactNode } from 'react'
-import styled from 'styled-components'
-import Head from 'next/head'
-import colors from '~/styles/colors'
+import { ReactNode } from "react";
+import styled from "styled-components";
+import Head from "next/head";
+import colors from "~/styles/colors";
 
 type LayoutProps = Required<{
-  readonly children: ReactNode
-  readonly metaTitle: String
-}>
+  readonly children: ReactNode;
+  readonly metaTitle: string;
+}>;
 
 const Layout = ({ children, metaTitle }: LayoutProps) => {
   /*-- variables --*/
@@ -16,22 +16,22 @@ const Layout = ({ children, metaTitle }: LayoutProps) => {
   /*-- life cycle --*/
 
   /*-- element --*/
-  return <>
-    <LayoutMain>
-      <Head>
-        <title>{metaTitle}&#65372;サイト名</title>
-        <meta name="description" content="INCT Densan homepage" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+  return (
+    <>
+      <LayoutMain>
+        <Head>
+          <title>{metaTitle}&#65372;サイト名</title>
+          <meta name="description" content="INCT Densan homepage" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <AppHeader />
+        <AppHeader />
 
-      <Main>
-        {children}
-      </Main>
-    </LayoutMain>
-  </>
-}
+        <Main>{children}</Main>
+      </LayoutMain>
+    </>
+  );
+};
 
 const LayoutMain = styled.div`
   display: grid;
@@ -41,7 +41,7 @@ const LayoutMain = styled.div`
   grid-template-columns: 40px 1fr 40px;
   grid-template-rows: 56px calc(100vh - 56px - 40px) 40px;
   align-items: center;
-`
+`;
 
 const Main = styled.main`
   grid-column: 2;
@@ -63,6 +63,6 @@ const Main = styled.main`
 
     text-align: center;
   }
-`
+`;
 
-export default Layout
+export default Layout;

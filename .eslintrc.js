@@ -1,50 +1,48 @@
 module.exports = {
-  plugins: ["@typescript-eslint"],
+  plugins: ['@typescript-eslint'],
   extends: [
-    "next",
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended"
+    'next',
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: "latest",
-    project: "./tsconfig.json",
+    ecmaVersion: 'latest',
+    project: './tsconfig.json',
     ecmaFeatures: {
-      "jsx": true
-    }
+      jsx: true,
+    },
   },
-  ignorePatterns: [
-    "./next.config.js"
-  ],
+  ignorePatterns: ['./next.config.js'],
   rules: {
-    "semi": [ "error", "never", { "beforeStatementContinuationChars": "never" } ],
-    "semi-spacing": [ "error", { "after": true, "before": false } ],
-    "semi-style": [ "error", "first" ],
-    "no-extra-semi": "error",
-    "no-unexpected-multiline": "error",
-    "no-unreachable": "error",
-    "no-console": [ "warn", { "allow": [ "warn", "error" ] } ],
-    "eol-last": [ "error", "always" ],
-    "quotes": [ 2, "single" ],
-    "object-curly-spacing": [ "error", "always" ],
-    "array-bracket-spacing": [ "error", "always" ],
-    "react/jsx-boolean-value": "error",
-    "react/jsx-no-undef": [0, { "allowGlobals": 0 }],
-    "react/self-closing-comp": [
-      "error",
+    'react/jsx-no-undef': [0, { allowGlobals: 0 }],
+    /* semi: ['error', 'never', { beforeStatementContinuationChars: 'never' }],
+    'semi-spacing': ['error', { after: true, before: false }],
+    'semi-style': ['error', 'first'],
+    'no-extra-semi': 'error',
+    'no-unexpected-multiline': 'error',
+    'no-unreachable': 'error',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    'eol-last': ['error', 'always'],
+    quotes: [2, 'single'],
+    'object-curly-spacing': ['error', 'always'],
+    'array-bracket-spacing': ['error', 'always'],
+    'react/jsx-boolean-value': 'error',
+    'react/self-closing-comp': [
+      'error',
       {
-        "component": true,
-        "html": true
-      }
+        component: true,
+        html: true,
+      },
     ],
-    "@typescript-eslint/naming-convention": [
-      "error",
+    '@typescript-eslint/naming-convention': [
+      'error',
       {
-        "selector": "variable",
-        "types": ["boolean"],
-        "format": ["PascalCase"],
-        "prefix": ["is", "should", "has", "can", "did", "will"]
-      }
-    ]
-  }
+        selector: 'variable',
+        types: ['boolean'],
+        format: ['PascalCase'],
+        prefix: ['is', 'should', 'has', 'can', 'did', 'will'],
+      },
+    ], */
+  },
 }
